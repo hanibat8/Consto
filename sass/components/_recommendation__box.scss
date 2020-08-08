@@ -1,0 +1,46 @@
+.recommendation__box{
+    position: absolute;
+    bottom:15%;
+    width: 40rem;
+    background-color: var(--color-white);
+    padding: 3.5rem;
+    z-index: 1;
+    font-weight: 400;
+
+    .recommendation-para{
+        font-size: 1.8rem;
+    }
+
+    &--1{
+        left:20%;
+    }
+
+    &--2{
+        left:50%;
+    }
+
+    .recommendation__user-details{
+        margin-top: 1rem;
+        display: flex;
+
+        &__user-detail{
+            flex: 1;
+            margin-left: 1rem;
+
+            .user-name{
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+
+            .user-company{
+                font-size: 1.5rem;
+            }
+        }
+
+        .icon__quote{
+            width: 3rem;
+            height: 4rem;
+            fill:var(--color-primary);
+        }
+    }
+}

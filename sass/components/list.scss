@@ -1,0 +1,41 @@
+.list{
+    display: flex;
+    list-style: none;
+
+    &__item{
+         
+        &:not(:last-of-type){
+            margin-right: 2.5rem;
+        }
+
+    }
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FFFE00;
+            backface-visibility: hidden;
+            
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.2s ease-in;
+        }
+
+        &:hover::after{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
+

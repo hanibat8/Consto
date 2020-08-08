@@ -1,0 +1,44 @@
+.consultations {
+	padding: 7rem 0;
+	grid-column: full-start/full-end;
+	background-color: rgb(61, 57, 57);
+	display: grid;
+	grid-template-columns: var(--grid-template-column);
+
+	.consultation {
+		grid-column: center-start/center-end;
+		color: var(--color-white);
+
+		h2 {
+			font-size: 4.8rem;
+		}
+
+		&__details {
+			display: flex;
+
+			&--call {
+				display: flex;
+				font-size: 1.5rem;
+				font-weight: 600;
+
+				p {
+					align-self: center;
+				}
+
+				span {
+					@include underline;
+					&::after {
+						bottom: .1rem;
+					}
+				}
+
+				img {
+					width: 6rem;
+					height: 6rem;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.arrows{
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    .btn--round + .btn--round{
+        margin-left: 1rem;
+    }
+}

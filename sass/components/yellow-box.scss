@@ -1,0 +1,52 @@
+.yellow-box-1{
+    @include box;
+    bottom: 5rem;
+    left: 3rem;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    .num{
+        font-size: 8rem;
+    }
+
+    p{
+        span{
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            width: 60%;
+        }
+    }
+}
+
+.yellow-box-2{
+    @include box;
+    bottom: -5%;
+    left: 50%;
+    text-align: center;
+    padding: 1.5rem 3rem;
+
+    .num{
+        font-size: 8rem;
+    }
+
+    p{
+        line-height: 1.2;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
+
+.yellow-box-3{
+    @include box;
+    bottom: -10%;
+    left: 30%;
+    padding: 2.5rem 3rem;
+
+    p{
+        margin-top: 1rem;
+        font-size: 1.8rem;
+    }
+}
