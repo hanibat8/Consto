@@ -369,15 +369,42 @@
                 </div>
             </div>
 
-            <div class="calculator__options">
+            <div class="calculator__selects">
                 <div>
-                    <label for="rooms">How many rooms:</label>
-                    <input type="" id="room" name="room" min="0" max="8">
+                    <label for="energy_type">Energy Type:</label>
+                    <div class="select">
+                        <select id="energy_type" name="energy_type" >
+                            <option value="bank_of_america">Bank of America</option>
+                        </select>   
+                    </div>   
                 </div>
 
                 <div>
-                    <label for="floor">Number of floor :</label>
-                    <input type="range" id="floor" name="floor" min="0" max="12">
+                    <label for="bathroom">Bathroom :</label>
+                    <div class="select">
+                        <select id="bathroom" name="bathroom" >
+                            <option value="bathroom">Bank of America</option>
+                        </select>  
+                    </div>                 
+                </div>
+
+                <div>
+                    <p>Terrace:</p>
+                    <div class="terrace">
+                        <label class="radio__label">
+                            <input type="radio" name="radio" checked/>
+                            <div class="terrace__yes terrace__choice">
+                                Yes
+                            </div>
+                        </label> 
+                        
+                        <label class="radio__label">
+                            <input type="radio" name="radio" />
+                            <div class="terrace__no terrace__choice">
+                                No
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
