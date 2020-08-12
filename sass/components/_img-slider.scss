@@ -1,21 +1,21 @@
-.img-slider{
-    grid-column: 2/6;
-    grid-row: 2/3;
-    padding-top: 6rem;
-    display: flex;
-    justify-content: space-around;
+.img-slider {
+	grid-column: 2/6;
+	grid-row: 2/3;
+	padding-top: 6rem;
+	display: flex;
+	justify-content: space-around;
 
-    p{
-        color:var(--color-grey-light-4);
-        font-size: 3rem;
-        span{
-            font-size: 6rem;
-            font-weight: 700;
-            color: #000;
-        }
-    }
+	p {
+		color: var(--color-grey-light-4);
+		font-size: 3rem;
+		span {
+			font-size: 6rem;
+			font-weight: 700;
+			color: #000;
+		}
+	}
 
-    a{
-        align-self: start;
-    }
+	a {
+		align-self: start;
+	}
 }

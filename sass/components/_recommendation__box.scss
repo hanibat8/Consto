@@ -1,46 +1,54 @@
-.recommendation__box{
-    position: absolute;
-    bottom:15%;
-    width: 40rem;
-    background-color: var(--color-white);
-    padding: 3.5rem;
-    z-index: 1;
-    font-weight: 400;
+.recommendation__box {
+	position: absolute;
+	bottom: 15%;
+	width: 40rem;
+	background-color: var(--color-white);
+	padding: 3.5rem;
+	z-index: 1;
+	font-weight: 400;
 
-    .recommendation-para{
-        font-size: 1.8rem;
-    }
+	.recommendation-para {
+		font-size: 1.8rem;
+	}
 
-    &--1{
-        left:20%;
-    }
+	&--1 {
+		left: 20%;
 
-    &--2{
-        left:50%;
-    }
+		@media (max-width: 1400px) {
+			left: 15%;
+		}
+	}
 
-    .recommendation__user-details{
-        margin-top: 1rem;
-        display: flex;
+	&--2 {
+		left: 50%;
 
-        &__user-detail{
-            flex: 1;
-            margin-left: 1rem;
+		@media (max-width: 1400px) {
+			left: 55%;
+		}
+	}
 
-            .user-name{
-                font-weight: 600;
-                font-size: 1.6rem;
-            }
+	.recommendation__user-details {
+		margin-top: 1rem;
+		display: flex;
 
-            .user-company{
-                font-size: 1.5rem;
-            }
-        }
+		&__user-detail {
+			flex: 1;
+			margin-left: 1rem;
 
-        .icon__quote{
-            width: 3rem;
-            height: 4rem;
-            fill:var(--color-primary);
-        }
-    }
+			.user-name {
+				font-weight: 600;
+				font-size: 1.6rem;
+			}
+
+			.user-company {
+				font-size: 1.5rem;
+			}
+		}
+
+		.icon__quote {
+			width: 3rem;
+			height: 4rem;
+			fill: var(--color-primary);
+		}
+	}
 }

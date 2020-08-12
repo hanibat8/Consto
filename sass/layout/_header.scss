@@ -1,57 +1,77 @@
-.header{
-    position: relative;
-    background-color: #000;
-    color: var(--color-white);
-    font-size: var(--default-font-size);
-    font-weight: 400;
-    grid-column: full-start/full-end;
-    grid-row: 1/2;
+.header {
+	position: relative;
+	background-color: #000;
+	color: var(--color-white);
+	font-size: var(--default-font-size);
+	font-weight: 400;
+	grid-column: full-start/full-end;
 
-    display: grid;
-    grid-template-columns: var(--grid-template-column);
+	display: grid;
+	grid-template-columns: var(--grid-template-column);
+	grid-template-rows: fit-content;
 
-    &__main-nav{
-        padding: 3.2rem 0;
-        grid-column: center-start/center-end;
-        display: flex;
-        align-items: center;
-    }
+	&__main-nav {
+		padding: 3.2rem 0;
+		grid-column: center-start/center-end;
+		display: flex;
+		align-items: center;
+	}
 }
 
-.content{
-    grid-column: 1/2;
-    padding-top: 8rem;
+.content-container {
+	grid-column: center-start/full-end;
+	display: grid;
+	grid-template-columns: minmax(min-content, 60rem) minmax(50%, 1fr);
+	grid-template-rows: repeat(2, fit-content);
+	grid-column-gap: .5rem;
 
-    &-container{
-        grid-column: center-start/full-end;
-        display: grid;
-        grid-template-columns: minmax(min-content,60rem) repeat(2,1fr);
-        grid-column-gap: .5rem;
-    }
+	@include for-tablet-landscape-down {
+		grid-column: center-start/center-end;
+		grid-template-columns: minmax(min-content, 60rem);
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #000;
+	}
+
+	.content {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		padding-top: 8rem;
+	}
 }
 
-.img{
-    width: 100%;
+.img-container {
+	grid-column: 2/3;
+	grid-row: 1/3;
+	position: relative;
 
-    &-container{
-        grid-column: 2/-1;
-        position: relative;
-    }
+	@include for-tablet-landscape-down {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+		background-color: #000;
+	}
+
+	.img {
+		width: 100%;
+	}
+
+	@include for-tablet-landscape-down {
+	}
 }
 
-.nav{
-    position:relative;
-    z-index: 15;
-    display: flex;
-    flex: 1;
+.nav {
+	position: relative;
+	z-index: 15;
+	display: flex;
+	flex: 1;
 
-    .header__list:not(:first-of-type){
-        margin: 0 auto;
-    }
+	.header__list:not(:first-of-type) {
+		margin: 0 auto;
+	}
 }
 
-.icon{
-    width: 2rem;
-    height: 2rem;
-    fill:var(--color-white);
+.icon {
+	width: 2rem;
+	height: 2rem;
+	fill: var(--color-white);
 }

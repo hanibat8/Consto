@@ -1,19 +1,30 @@
-:root{
-    --color-primary:#FFFE00;
+:root {
+	--color-primary: #fffe00;
 
-    --color-black:#0000;
-    --color-white:#ffff;
+	--color-black: #0000;
+	--color-white: #ffff;
 
-    --color-grey-light-1: #faf9f9;
-    --color-grey-light-2: #f4f2f2;
-    --color-grey-light-3: #f0eeee;
-    --color-grey-light-4: #ccc;
+	--color-grey-light-1: #faf9f9;
+	--color-grey-light-2: #f4f2f2;
+	--color-grey-light-3: #f0eeee;
+	--color-grey-light-4: #ccc;
 
-    --color-grey-dark-1: #333;
-    --color-grey-dark-2: #777;
-    --color-grey-dark-3: #999;
+	--color-grey-dark-1: #333;
+	--color-grey-dark-2: #777;
+	--color-grey-dark-3: #999;
 
-    --default-font-size:2rem;
+	--default-font-size: 2rem;
 
-    --grid-template-column:[full-start] minmax(6rem,1fr) [center-start] repeat(9, [col-start] minmax(min-content,13rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+	--grid-template-column: [full-start] minmax(6rem, 1fr) [center-start]
+		repeat(9, [col-start] minmax(min-content, 13rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+	@include for-desktop-down {
+		--grid-template-column: [full-start] minmax(6rem, 1fr) [center-start]
+			repeat(9, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	}
+
+	@include for-tablet-landscape-down {
+		--grid-template-column: [full-start] minmax(6rem, 1fr) [center-start]
+			repeat(9, [col-start] minmax(min-content, 9rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+	}
 }
