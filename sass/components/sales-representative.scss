@@ -1,67 +1,80 @@
 .sales-representative {
-    grid-column: center-start/center-end;
-    padding: 12rem 0;
-    padding-bottom: 40rem;
+	grid-column: center-start/center-end;
+	padding: 12rem 0;
+	padding-bottom: 40rem;
 
-    &__title {
-        text-align: center;
+	&__title {
+		text-align: center;
 
-        h3 {
-            @include underline;
-        }
-    }
+		h3 {
+			@include underline;
+		}
+	}
 
-    &__wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-        grid-template-rows: 24rem;
-        grid-gap: 3.5rem;
-        grid-row-gap: 20rem;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		grid-template-rows: 26rem;
+		grid-gap: 3.5rem;
+		grid-row-gap: 20rem;
 
-        .sales-representative__person {
-            transition: all 0.2s ease-in;
+		@include for-tablet-portrait-down {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, 35rem);
+		}
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
+		.sales-representative__person {
+			transition: all 0.2s ease-in;
 
-            .sales-representative__details {
-                margin: 1.6rem 0;
-                text-align: center;
-                font-size: 1.4rem;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
 
-                .sales-representative__name {
-                    margin-bottom: 1.2rem;
-                    font-size: 1.6rem;
-                    font-weight: 400;
-                }
+			@include for-tablet-landscape-down {
+				height: 20rem;
+			}
 
-                .sales-representative__contact {
-                    font-weight: 900;
-                }
-            }
+			@include for-tablet-portrait-down {
+				height: 35rem;
+			}
 
-            .sales-representative__social-media {
-                display: flex;
-                justify-content: center;
+			.sales-representative__details {
+				margin: 1.6rem 0;
+				text-align: center;
+				font-size: 1.4rem;
 
-                .icon__social-media {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                }
+				.sales-representative__name {
+					margin-bottom: 1.2rem;
+					font-size: 1.6rem;
+					font-weight: 400;
+				}
 
-                .icon__social-media:first-child {
-                    margin-right: 1rem;
-                }
-            }
+				.sales-representative__contact {
+					font-weight: 900;
+				}
+			}
 
-            &:hover {
-                transform: translateY(-1.2rem);
-                background-color: var(--color-primary);
-            }
-        }
-    }
+			.sales-representative__social-media {
+				display: flex;
+				justify-content: center;
+
+				.icon__social-media {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+
+				.icon__social-media:first-child {
+					margin-right: 1rem;
+				}
+			}
+
+			&:hover {
+				transform: translateY(-1.2rem);
+				background-color: var(--color-primary);
+			}
+		}
+	}
 }

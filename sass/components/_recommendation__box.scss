@@ -25,6 +25,10 @@
 		@media (max-width: 1400px) {
 			left: 55%;
 		}
+
+		@include for-tablet-landscape-down {
+			display: none;
+		}
 	}
 
 	.recommendation__user-details {

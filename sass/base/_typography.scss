@@ -1,32 +1,31 @@
-%heading{
+%heading {
     font-weight: 400;
 }
 
-.heading-1{
+.heading-1 {
     @extend %heading;
-    font-size: 6.4rem;
+    font-size: 7rem;
     font-weight: 700;
     line-height: 1.1;
     text-transform: capitalize;
 
-    & span{
-        color:var(--color-white);
+    & span {
+        color: var(--color-white);
         -webkit-text-fill-color: #000;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: var(--color-white);
     }
 }
 
-.heading-2{
+.heading-2 {
     @extend %heading;
-    font-size: 4rem;
+    font-size: 4.2rem;
     font-weight: 700;
     line-height: 1;
 }
 
-.heading-3{
+.heading-3 {
     @extend %heading;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
-

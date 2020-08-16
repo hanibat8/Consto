@@ -45,8 +45,8 @@
 	}
 }
 @mixin for-big-desktop-up {
-	// 1800px  (1800/16)
-	@media (min-width: 112.5em) {
+	// 1550px  (1550/16)
+	@media (min-width: 96.875em) {
 		@content;
 	}
 }

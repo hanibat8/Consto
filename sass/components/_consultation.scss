@@ -16,10 +16,18 @@
 		&__details {
 			display: flex;
 
+			@include for-tablet-portrait-down {
+				flex-direction: column;
+			}
+
 			&--call {
 				display: flex;
 				font-size: 1.5rem;
 				font-weight: 600;
+
+				@include for-tablet-portrait-down {
+					flex-direction: column;
+				}
 
 				p {
 					align-self: center;

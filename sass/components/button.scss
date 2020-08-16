@@ -41,6 +41,21 @@
 				display: none;
 			}
 		}
+
+		@include for-tablet-landscape-down {
+			padding: 1.6rem 3.7rem;
+			span {
+				display: unset;
+			}
+		}
+
+		@include for-tablet-portrait-down {
+			padding: 3rem 2rem;
+
+			span {
+				display: none;
+			}
+		}
 	}
 
 	&--round {

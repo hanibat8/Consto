@@ -20,16 +20,25 @@ html {
 	@include for-tablet-landscape-down {
 		font-size: 50%;
 	}
+
+	@include for-big-desktop-up {
+		font-size: 75%; //1rem=12px , 12/16= 75%
+	}
 }
 
 body {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 	font-weight: 300;
 	line-height: 1.6;
 }
 
 .container {
 	display: grid;
-	grid-template-rows: 70vh 30vh repeat(3, min-content);
+	grid-template-rows: 80vh 20vh repeat(3, min-content);
+
+	@include for-tablet-landscape-down {
+		grid-template-rows: min-content min-content repeat(3, min-content);
+	}
+
 	grid-template-columns: var(--grid-template-column);
 }
