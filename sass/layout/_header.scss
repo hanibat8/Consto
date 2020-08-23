@@ -94,3 +94,18 @@
 	height: 2rem;
 	fill: var(--color-white);
 }
+
+//SERVICES
+.services__header-content{
+	grid-column: center-start/center-end;
+	display: grid;
+	align-items:center;
+
+	h1{
+		font-size:11rem;
+	}
+
+	h3{
+		color:var(--color-grey-dark-3);
+	}
+}
