@@ -9,6 +9,7 @@
 		color: var(--color-grey-light-4);
 		font-size: 3rem;
 		span {
+			transition: all .2s ease-in;
 			font-size: 6rem;
 			font-weight: 700;
 			color: #000;

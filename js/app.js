@@ -31,9 +31,7 @@ rbtn.addEventListener('click',function(){
     if(currentItem>headerData.length-1){
         currentItem=0;
     }
-    img.src=headerData[currentItem].img;
-    num.textContent=headerData[currentItem].num;
-    h1.textContent=headerData[currentItem].h1;
+    changeData();
 });
 
 lbtn.addEventListener('click',function(){
@@ -41,7 +39,11 @@ lbtn.addEventListener('click',function(){
     if(currentItem<0){
         currentItem=headerData.length-1;
     }
+
+});
+
+function changeData(){
     img.src=headerData[currentItem].img;
     num.textContent=headerData[currentItem].num;
     h1.textContent=headerData[currentItem].h1;
-});
+}
